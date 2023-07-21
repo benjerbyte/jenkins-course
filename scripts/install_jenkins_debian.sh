@@ -4,15 +4,15 @@
 
 # install docker
 
-apt -y install software-properties-common dirmngr apt-transport-https lsb-release ca-certificates curl
+#apt -y install software-properties-common dirmngr apt-transport-https lsb-release ca-certificates curl
 
-curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+#curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 
-apt-add-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
-apt-get update
-apt-get install -y docker-ce
-systemctl enable docker
-systemctl start sauce
+#apt-add-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
+#apt-get update
+#apt-get install -y docker-ce
+#systemctl enable docker
+#systemctl start sauce
 
 # run jenkins
 mkdir -p /var/jenkins_home
