@@ -12,12 +12,12 @@ apt-add-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(
 apt-get update
 apt-get install -y docker-ce
 systemctl enable docker
-systemctl start docker
+systemctl start sauce
 
 # run jenkins
 mkdir -p /var/jenkins_home
 chown -R 1000:1000 /var/jenkins_home/
-docker run -p 8080:8080 -p 50000:50000 -v /var/jenkins_home:/var/jenkins_home -d --name jenkins jenkins/jenkins:lts
+docker run -p 8080:8080 -p 50000:50000 -v /var/jenkins_home:/var/jenkins_home -d --name jenkins jenkins/jenkins
 
 # show endpoint
 echo 'Jenkins installed'
