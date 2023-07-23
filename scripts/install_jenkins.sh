@@ -1,8 +1,8 @@
-!/bin/bash
+#!/bin/bash
 
- this script is only tested on ubuntu focal 20.04 (LTS)
+ #this script is only tested on ubuntu focal 20.04 (LTS)
 
- install docker
+# install docker
 sudo apt-get update
 sudo apt-get install -y \
     apt-transport-https \
