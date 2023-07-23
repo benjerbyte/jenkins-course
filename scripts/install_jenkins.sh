@@ -1,24 +1,24 @@
-#!/bin/bash
+!/bin/bash
 
-# this script is only tested on ubuntu focal 20.04 (LTS)
+ this script is only tested on ubuntu focal 20.04 (LTS)
 
-# install docker
-#sudo apt-get update
-#sudo apt-get install -y \
-##    apt-transport-https \
- #   ca-certificates \
- #   curl \
- #   gnupg \
- #   lsb-release
-#curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-#echo \
-#  "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
-#  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-#sudo apt-get update
-#sudo apt-get install -y docker-ce docker-ce-cli containerd.io
-#systemctl enable docker
-#systemctl start docker
-#usermod -aG docker sauce
+ install docker
+sudo apt-get update
+sudo apt-get install -y \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io
+systemctl enable docker
+systemctl start docker
+usermod -aG docker sauce
 
 # run jenkins
 sudo mkdir -p /var/jenkins_home
